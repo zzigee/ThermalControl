@@ -16,6 +16,9 @@ namespace ThermalControl
 
         public ThermalControl m_ThermalControl;
         public TCPClass m_TCPClass;
+        
+        public DefineClass.ST_TEMP_SENSOR stTempSensor;
+        public DefineClass.ST_MFC_CONTROLLER stMfcController;
 
         public MainClass(MainForm mf)
         {
@@ -26,6 +29,9 @@ namespace ThermalControl
             this.m_UtilsClass = new UtilsClass(this);
             this.m_TCPClass = new TCPClass(this, (int)DefineClass.TIMER_INTERVAL.TEN_SEC);
             this.m_ThermalControl = new ThermalControl(this, (int)DefineClass.TIMER_INTERVAL.TEN_SEC);
+
+            stTempSensor = new DefineClass.ST_TEMP_SENSOR();
+            stMfcController = new DefineClass.ST_MFC_CONTROLLER();
         }
     }
 }

@@ -10,6 +10,8 @@ namespace ThermalControl
 {
     class LiveData
     {
+        public MainForm mf;
+
         public BindingList<ChartTemp> data;
 
         private Timer timer;
@@ -22,8 +24,10 @@ namespace ThermalControl
         private string MessagesPerSecond;
         private string MessagesPerMinute;
 
-        public LiveData()
+        public LiveData(MainForm mf)
         {
+            this.mf = mf;
+
             this.timer = new Timer();
             this.timer.Interval = 1;
             this.timer.Tick += this.OnTimer;
@@ -82,6 +86,7 @@ namespace ThermalControl
 
 
 
+
         private ChartTemp CreateBusinessObject()
         {
             ChartTemp obj = new ChartTemp();
@@ -109,8 +114,9 @@ namespace ThermalControl
             this.lastDate = this.lastDate.AddMilliseconds(200);
             this.Data.RemoveAt(0);
             this.Data.Add(this.CreateBusinessObject());
+
+            // PID TEST 
+            mf.PV = this.CreateBusinessObject().Value;
         }
-
-
     }
 }
