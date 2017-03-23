@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace ThermalControl
 {
-    class LiveData
+    class LiveDataModel
     {
-        public MainForm mf;
+        public MainClass m_MainClass;
 
         public BindingList<ChartTemp> data;
 
@@ -24,22 +24,20 @@ namespace ThermalControl
         private string MessagesPerSecond;
         private string MessagesPerMinute;
 
-        public LiveData(MainForm mf)
-        {
-            this.mf = mf;
+        private int tickCountSecond;
+        private int tickCountMinute;
 
+        public LiveDataModel(MainClass mc)
+        {
+            this.m_MainClass = mc;
+            
             this.timer = new Timer();
-            this.timer.Interval = 1;
+            this.timer.Interval = m_MainClass.m_Define_Class.nLiveChartUpdateSecond;
             this.timer.Tick += this.OnTimer;
 
             this.FillData();
-            //this.MessagesPerSecond = this.random.Next(5000, 80000).ToString("#,#");
-            //this.MessagesPerMinute = this.random.Next(50000, 55000).ToString("#,#");
-        
         }
-
-
-
+        
         private void FillData()
         {
             BindingList<ChartTemp> collection = new BindingList<ChartTemp>();
@@ -83,15 +81,14 @@ namespace ThermalControl
                 }
             }
         }
-
-
-
+        
 
         private ChartTemp CreateBusinessObject()
         {
             ChartTemp obj = new ChartTemp();
 
-            obj.Value = this.random.Next(0, 250);
+            //obj.Value = this.random.Next(0, 250);
+            obj.Value = m_MainClass.stTempSensor.fCurrentTemp;
             obj.Category = this.lastDate;
 
             return obj;
@@ -114,9 +111,30 @@ namespace ThermalControl
             this.lastDate = this.lastDate.AddMilliseconds(200);
             this.Data.RemoveAt(0);
             this.Data.Add(this.CreateBusinessObject());
+            this.UpdateMetrics();
 
             // PID TEST 
-            mf.PV = this.CreateBusinessObject().Value;
+            //mf.PV = this.CreateBusinessObject().Value;
         }
+
+
+        private void UpdateMetrics()
+        {
+            this.tickCountSecond++;
+            this.tickCountMinute++;
+
+            if (this.tickCountSecond == 5)
+            {
+                this.tickCountSecond = 0;
+                this.MessagesPerSecond = this.random.Next(800, 1800).ToString("#,#");
+            }
+
+            if (this.tickCountMinute == 100)
+            {
+                this.tickCountMinute = 0;
+                this.MessagesPerMinute = this.random.Next(50000, 55000).ToString("#,#");
+            }
+        }
+
     }
 }

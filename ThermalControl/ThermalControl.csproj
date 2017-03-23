@@ -65,7 +65,7 @@
   <ItemGroup>
     <Compile Include="Class\Algorithm\ChartTemp.cs" />
     <Compile Include="Class\Algorithm\DataDelegates.cs" />
-    <Compile Include="Class\Algorithm\LiveData.cs" />
+    <Compile Include="Class\Algorithm\LiveDataModel.cs" />
     <Compile Include="Class\Algorithm\PID.cs" />
     <Compile Include="Class\Algorithm\TCPClass.cs" />
     <Compile Include="Class\Algorithm\ThermalControl.cs" />

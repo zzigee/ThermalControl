@@ -6,15 +6,56 @@ using System.Threading.Tasks;
 
 namespace ThermalControl
 {
+
+
     class DefineClass
     {
 
         public MainClass m_MainClass;
-        
+
         public DefineClass(MainClass mc)
         {
             this.m_MainClass = mc;
         }
+
+        public string strSensorBoardIP = "192.168.0.115";
+        public int nSensorBoardPort = 5555;
+
+        public int nLiveChartUpdateSecond = 1000;           // Live Chart Update Period (second)
+       
+        public bool isAutoRun = false;
+
+        // Temp Sensor Board Parameters 
+        public bool isConTempSensor = false;    // Temp Sensor Connection Flag 
+
+
+        // MFC Parameters 
+        public bool isMFC_Con = false;           // MFC Connection Flag 
+        public bool isMFC_Digit_Mode = false;   // Digital Model Flag 
+        public bool isMFC_Valve_Open = false;   
+
+
+        public struct ST_PID_GAIN
+        {
+            public double kp;
+            public double ki;
+            public double kd;
+
+            // Input Temperature
+            public double inputMax;     
+            public double inputMin;
+
+            // Output MFC Flow 
+            public double outMax;
+            public double outMin;
+            
+            public double PV;       // Measured Value (Current Temperature)
+            public double SP;       // Set-Point Value (Target Temperature)
+            public double OV;       // Output Value (Target Flow)
+        }
+
+        
+
 
         public struct ST_TEMP_SENSOR
         {

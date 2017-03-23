@@ -6,6 +6,7 @@ namespace ThermalControl
 {
     class PID
     {
+        private readonly MainClass m_MainClass;
 
         #region Fields
 
@@ -88,7 +89,10 @@ namespace ThermalControl
         #endregion
 
         #region Construction / Deconstruction
-
+        public PID(MainClass mc)
+        {
+            m_MainClass = mc;
+        }
         public PID(double pG, double iG, double dG,
             double pMax, double pMin, double oMax, double oMin,
             GetDouble pvFunc, GetDouble spFunc, SetDouble outFunc)
@@ -144,6 +148,8 @@ namespace ThermalControl
             errSum = 0.0f;
             lastUpdate = DateTime.Now;
         }
+
+        
 
         #endregion
 
