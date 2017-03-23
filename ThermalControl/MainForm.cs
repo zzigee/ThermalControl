@@ -724,7 +724,8 @@ namespace ThermalControl
 
 
 
-            
+
+            // Request Current Flow 
             buff[0] = 0x02;
 
             buff[1] = Convert.ToByte('0');
