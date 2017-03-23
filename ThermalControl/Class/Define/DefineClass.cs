@@ -21,9 +21,19 @@ namespace ThermalControl
         public string strSensorBoardIP = "192.168.0.115";
         public int nSensorBoardPort = 5555;
 
+
+
+        
+        
+        
         public int nLiveChartUpdateSecond = 1000;           // Live Chart Update Period (second)
        
+        
+        
         public bool isAutoRun = false;
+
+
+
 
         // Temp Sensor Board Parameters 
         public bool isConTempSensor = false;    // Temp Sensor Connection Flag 
@@ -32,7 +42,10 @@ namespace ThermalControl
         // MFC Parameters 
         public bool isMFC_Con = false;           // MFC Connection Flag 
         public bool isMFC_Digit_Mode = false;   // Digital Model Flag 
-        public bool isMFC_Valve_Open = false;   
+        public bool isMFC_Valve_Open = false;
+
+        public string MFC_Serial_Port_Name = "COM3";
+        public int MFC_Serial_BaudRate = 38400;
 
 
         public struct ST_PID_GAIN
