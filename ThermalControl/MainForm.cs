@@ -59,20 +59,15 @@ namespace ThermalControl
 
             m_MainClass.m_LiveDataModel.StartTimer();     // Start LiveDataChart Timer 
             m_MainClass.m_LiveDataModel.PropertyChanged += new PropertyChangedEventHandler(model_PropertyChanged);
-
-
-
+            
 
             m_MainClass.stPIDGain.kp = 100.1;
             m_MainClass.stPIDGain.ki = 0.1;
             m_MainClass.stPIDGain.kd = 0.1;
             m_MainClass.stPIDGain.inputMax = 200;
-            m_MainClass.stPIDGain.inputMin = -10;
-            m_MainClass.stPIDGain.outMax = 45;
-            m_MainClass.stPIDGain.outMin = -10;
-            m_MainClass.stPIDGain.SP = 50;
-            m_MainClass.stPIDGain.OV = 0;
-            m_MainClass.stPIDGain.PV = 50;
+            m_MainClass.stPIDGain.inputMin = 50;
+            m_MainClass.stPIDGain.outMax = 25;
+            m_MainClass.stPIDGain.outMin = 0;
 
 
             tbGain_P.Text = m_MainClass.stPIDGain.kp.ToString();
@@ -105,7 +100,7 @@ namespace ThermalControl
                 buff[6] = Convert.ToByte('1');
 
                 buff[7] = Convert.ToByte('0');
-                buff[8] = Convert.ToByte('0');
+                buff[8] = Convert.ToByte('1');
 
                 // check sum 
                 int checksum = buff[1] ^ buff[2] ^ buff[3] ^ buff[4] ^ buff[5] ^ buff[6] ^ buff[7] ^ buff[8];
@@ -671,6 +666,49 @@ namespace ThermalControl
                 Console.Write("PV : " + m_MainClass.stPIDGain.PV);
                 Console.Write(", SP : " + m_MainClass.stPIDGain.SP);
                 Console.WriteLine(", OV : " + m_MainClass.stPIDGain.OV);
+
+
+                if (serialPort.IsOpen)
+                {
+                    string str = BitConverter.ToString(BitConverter.GetBytes(m_MainClass.stMfcController.fTargetFlow));
+
+                    buff[0] = 0x02;
+
+                    buff[1] = Convert.ToByte('0');
+                    buff[2] = Convert.ToByte('1');
+
+                    buff[3] = Convert.ToByte('D');
+
+                    buff[4] = Convert.ToByte('w');
+
+                    buff[5] = Convert.ToByte('0');
+                    buff[6] = Convert.ToByte('9');
+
+                    buff[7] = Convert.ToByte(Convert.ToChar(str.Substring(0, 1)));
+                    buff[8] = Convert.ToByte(Convert.ToChar(str.Substring(1, 1)));
+
+                    buff[9] = Convert.ToByte(Convert.ToChar(str.Substring(3, 1)));
+                    buff[10] = Convert.ToByte(Convert.ToChar(str.Substring(4, 1)));
+
+                    buff[11] = Convert.ToByte(Convert.ToChar(str.Substring(6, 1)));
+                    buff[12] = Convert.ToByte(Convert.ToChar(str.Substring(7, 1)));
+
+                    buff[13] = Convert.ToByte(Convert.ToChar(str.Substring(9, 1)));
+                    buff[14] = Convert.ToByte(Convert.ToChar(str.Substring(10, 1)));
+
+                    // check sum 
+                    int checksum = buff[1] ^ buff[2] ^ buff[3] ^ buff[4] ^ buff[5] ^ buff[6] ^ buff[7] ^ buff[8] ^ buff[9] ^ buff[10] ^ buff[11] ^ buff[12] ^ buff[13] ^ buff[14];
+                    string str1 = checksum.ToString("X2").Substring(0, 1);
+                    string str2 = checksum.ToString("X2").Substring(1, 1);
+
+                    buff[15] = (byte)Convert.ToChar(str1);
+                    buff[16] = (byte)Convert.ToChar(str2);
+
+                    buff[17] = 0x03;
+
+                    serialPort.Write(buff, 0, 18);
+
+                }
             }
 
             
@@ -686,7 +724,7 @@ namespace ThermalControl
 
 
 
-            /*
+            
             buff[0] = 0x02;
 
             buff[1] = Convert.ToByte('0');
@@ -700,17 +738,17 @@ namespace ThermalControl
             buff[6] = Convert.ToByte('4');
             
             // check sum 
-            int checksum = buff[1] ^ buff[2] ^ buff[3] ^ buff[4] ^ buff[5] ^ buff[6];
-            string str1 = checksum.ToString("X2").Substring(0, 1);
-            string str2 = checksum.ToString("X2").Substring(1, 1);
+            int checksum1 = buff[1] ^ buff[2] ^ buff[3] ^ buff[4] ^ buff[5] ^ buff[6];
+            string str11 = checksum1.ToString("X2").Substring(0, 1);
+            string str21 = checksum1.ToString("X2").Substring(1, 1);
 
-            buff[7] = (byte)Convert.ToChar(str1);
-            buff[8] = (byte)Convert.ToChar(str2);
+            buff[7] = (byte)Convert.ToChar(str11);
+            buff[8] = (byte)Convert.ToChar(str21);
 
             buff[9] = 0x03;
 
             serialPort.Write(buff, 0, 10);
-             * */
+            
 
 
             

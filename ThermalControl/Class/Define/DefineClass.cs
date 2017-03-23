@@ -44,7 +44,7 @@ namespace ThermalControl
         public bool isMFC_Digit_Mode = false;   // Digital Model Flag 
         public bool isMFC_Valve_Open = false;
 
-        public string MFC_Serial_Port_Name = "COM3";
+        public string MFC_Serial_Port_Name = "COM5";
         public int MFC_Serial_BaudRate = 38400;
 
 

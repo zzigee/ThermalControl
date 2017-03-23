@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.CartesianArea cartesianArea2 = new Telerik.WinControls.UI.CartesianArea();
-            Telerik.WinControls.UI.CategoricalAxis categoricalAxis2 = new Telerik.WinControls.UI.CategoricalAxis();
-            Telerik.WinControls.UI.LinearAxis linearAxis2 = new Telerik.WinControls.UI.LinearAxis();
-            Telerik.WinControls.UI.AreaSeries areaSeries2 = new Telerik.WinControls.UI.AreaSeries();
+            Telerik.WinControls.UI.CartesianArea cartesianArea1 = new Telerik.WinControls.UI.CartesianArea();
+            Telerik.WinControls.UI.CategoricalAxis categoricalAxis1 = new Telerik.WinControls.UI.CategoricalAxis();
+            Telerik.WinControls.UI.LinearAxis linearAxis1 = new Telerik.WinControls.UI.LinearAxis();
+            Telerik.WinControls.UI.AreaSeries areaSeries1 = new Telerik.WinControls.UI.AreaSeries();
             this.radRadialGauge1 = new Telerik.WinControls.UI.Gauges.RadRadialGauge();
             this.radialGaugeArc1 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
             this.radialGaugeArc2 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
@@ -154,10 +154,10 @@
             this.radialGaugeLabels2,
             this.radialGaugeNeedle2,
             this.radialGaugeNeedle1});
-            this.radRadialGauge1.Location = new System.Drawing.Point(3, 28);
+            this.radRadialGauge1.Location = new System.Drawing.Point(3, 19);
             this.radRadialGauge1.Name = "radRadialGauge1";
             this.radRadialGauge1.RangeEnd = 180D;
-            this.radRadialGauge1.Size = new System.Drawing.Size(206, 182);
+            this.radRadialGauge1.Size = new System.Drawing.Size(206, 191);
             this.radRadialGauge1.TabIndex = 1;
             this.radRadialGauge1.Text = "radRadialGauge2";
             this.radRadialGauge1.ThemeName = "ControlDefault";
@@ -313,11 +313,11 @@
             this.linearGaugeLine3,
             this.linearGaugeTicks4,
             this.linearGaugeNeedleIndicator1});
-            this.radLinearGauge1.Location = new System.Drawing.Point(3, 28);
+            this.radLinearGauge1.Location = new System.Drawing.Point(3, 19);
             this.radLinearGauge1.Name = "radLinearGauge1";
             this.radLinearGauge1.Padding = new System.Windows.Forms.Padding(0, 5, 40, 5);
             this.radLinearGauge1.RangeEnd = 45F;
-            this.radLinearGauge1.Size = new System.Drawing.Size(112, 182);
+            this.radLinearGauge1.Size = new System.Drawing.Size(112, 191);
             this.radLinearGauge1.TabIndex = 0;
             this.radLinearGauge1.Text = "radLinearGauge1";
             this.radLinearGauge1.Vertical = true;
@@ -461,12 +461,12 @@
             this.radTrackBar1.LabelStyle = Telerik.WinControls.UI.TrackBarLabelStyle.BottomRight;
             this.radTrackBar1.LargeChange = 1;
             this.radTrackBar1.LargeTickFrequency = 20;
-            this.radTrackBar1.Location = new System.Drawing.Point(3, 28);
+            this.radTrackBar1.Location = new System.Drawing.Point(3, 19);
             this.radTrackBar1.Maximum = 200F;
             this.radTrackBar1.Minimum = 40F;
             this.radTrackBar1.Name = "radTrackBar1";
             this.radTrackBar1.ShowButtons = true;
-            this.radTrackBar1.Size = new System.Drawing.Size(330, 55);
+            this.radTrackBar1.Size = new System.Drawing.Size(330, 44);
             this.radTrackBar1.TabIndex = 4;
             this.radTrackBar1.Text = "radTrackBar1";
             this.radTrackBar1.ThemeName = "Windows7";
@@ -488,11 +488,11 @@
             // 
             this.radTrackBar2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radTrackBar2.LabelStyle = Telerik.WinControls.UI.TrackBarLabelStyle.BottomRight;
-            this.radTrackBar2.Location = new System.Drawing.Point(3, 28);
+            this.radTrackBar2.Location = new System.Drawing.Point(3, 19);
             this.radTrackBar2.Maximum = 45F;
             this.radTrackBar2.Name = "radTrackBar2";
             this.radTrackBar2.ShowButtons = true;
-            this.radTrackBar2.Size = new System.Drawing.Size(330, 55);
+            this.radTrackBar2.Size = new System.Drawing.Size(330, 44);
             this.radTrackBar2.TabIndex = 4;
             this.radTrackBar2.Text = "radTrackBar2";
             this.radTrackBar2.ThemeName = "Windows7";
@@ -513,32 +513,32 @@
             // 
             // radChartView1
             // 
-            cartesianArea2.GridDesign.DrawVerticalFills = false;
-            cartesianArea2.ShowGrid = true;
-            this.radChartView1.AreaDesign = cartesianArea2;
-            categoricalAxis2.IsPrimary = true;
-            categoricalAxis2.LabelRotationAngle = 300D;
-            categoricalAxis2.Title = "";
-            linearAxis2.AxisType = Telerik.Charting.AxisType.Second;
-            linearAxis2.IsPrimary = true;
-            linearAxis2.LabelRotationAngle = 300D;
-            linearAxis2.TickOrigin = null;
-            linearAxis2.Title = "온도";
+            cartesianArea1.GridDesign.DrawVerticalFills = false;
+            cartesianArea1.ShowGrid = true;
+            this.radChartView1.AreaDesign = cartesianArea1;
+            categoricalAxis1.IsPrimary = true;
+            categoricalAxis1.LabelRotationAngle = 300D;
+            categoricalAxis1.Title = "";
+            linearAxis1.AxisType = Telerik.Charting.AxisType.Second;
+            linearAxis1.IsPrimary = true;
+            linearAxis1.LabelRotationAngle = 300D;
+            linearAxis1.TickOrigin = null;
+            linearAxis1.Title = "온도";
             this.radChartView1.Axes.AddRange(new Telerik.WinControls.UI.Axis[] {
-            categoricalAxis2,
-            linearAxis2});
+            categoricalAxis1,
+            linearAxis1});
             this.radChartView1.Controls.Add(this.button1);
             this.radChartView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radChartView1.Location = new System.Drawing.Point(2, 18);
             this.radChartView1.Name = "radChartView1";
-            areaSeries2.DataMember = "model.Data";
-            areaSeries2.HorizontalAxis = categoricalAxis2;
-            areaSeries2.LabelAngle = 90D;
-            areaSeries2.LabelDistanceToPoint = 15D;
-            areaSeries2.LegendTitle = null;
-            areaSeries2.VerticalAxis = linearAxis2;
+            areaSeries1.DataMember = "model.Data";
+            areaSeries1.HorizontalAxis = categoricalAxis1;
+            areaSeries1.LabelAngle = 90D;
+            areaSeries1.LabelDistanceToPoint = 15D;
+            areaSeries1.LegendTitle = null;
+            areaSeries1.VerticalAxis = linearAxis1;
             this.radChartView1.Series.AddRange(new Telerik.WinControls.UI.ChartSeries[] {
-            areaSeries2});
+            areaSeries1});
             this.radChartView1.Size = new System.Drawing.Size(600, 346);
             this.radChartView1.TabIndex = 0;
             this.radChartView1.Text = "radChartView1";
@@ -578,15 +578,15 @@
             this.tbCurrentFlow.ForeColor = System.Drawing.Color.Lime;
             this.tbCurrentFlow.Location = new System.Drawing.Point(80, 48);
             this.tbCurrentFlow.Name = "tbCurrentFlow";
-            this.tbCurrentFlow.Size = new System.Drawing.Size(89, 35);
+            this.tbCurrentFlow.Size = new System.Drawing.Size(89, 24);
             this.tbCurrentFlow.TabIndex = 1;
             this.tbCurrentFlow.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(6, 48);
+            this.radLabel2.Location = new System.Drawing.Point(3, 48);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(137, 34);
+            this.radLabel2.Size = new System.Drawing.Size(87, 22);
             this.radLabel2.TabIndex = 2;
             this.radLabel2.Text = "Current Flow";
             // 
@@ -597,15 +597,15 @@
             this.tbSetFlow.ForeColor = System.Drawing.Color.Lime;
             this.tbSetFlow.Location = new System.Drawing.Point(80, 23);
             this.tbSetFlow.Name = "tbSetFlow";
-            this.tbSetFlow.Size = new System.Drawing.Size(89, 35);
+            this.tbSetFlow.Size = new System.Drawing.Size(89, 24);
             this.tbSetFlow.TabIndex = 0;
             this.tbSetFlow.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(23, 24);
+            this.radLabel1.Location = new System.Drawing.Point(20, 24);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(94, 34);
+            this.radLabel1.Size = new System.Drawing.Size(60, 22);
             this.radLabel1.TabIndex = 0;
             this.radLabel1.Text = "Set Flow";
             // 
@@ -665,10 +665,10 @@
             // 
             this.tbGain_Output_Min.BackColor = System.Drawing.Color.White;
             this.tbGain_Output_Min.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGain_Output_Min.ForeColor = System.Drawing.Color.Lime;
+            this.tbGain_Output_Min.ForeColor = System.Drawing.Color.Black;
             this.tbGain_Output_Min.Location = new System.Drawing.Point(3, 44);
             this.tbGain_Output_Min.Name = "tbGain_Output_Min";
-            this.tbGain_Output_Min.Size = new System.Drawing.Size(59, 35);
+            this.tbGain_Output_Min.Size = new System.Drawing.Size(59, 24);
             this.tbGain_Output_Min.TabIndex = 19;
             this.tbGain_Output_Min.Text = "`";
             this.tbGain_Output_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -678,10 +678,10 @@
             // 
             this.tbGain_Output_Max.BackColor = System.Drawing.Color.White;
             this.tbGain_Output_Max.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGain_Output_Max.ForeColor = System.Drawing.Color.Lime;
+            this.tbGain_Output_Max.ForeColor = System.Drawing.Color.Black;
             this.tbGain_Output_Max.Location = new System.Drawing.Point(3, 19);
             this.tbGain_Output_Max.Name = "tbGain_Output_Max";
-            this.tbGain_Output_Max.Size = new System.Drawing.Size(59, 35);
+            this.tbGain_Output_Max.Size = new System.Drawing.Size(59, 24);
             this.tbGain_Output_Max.TabIndex = 18;
             this.tbGain_Output_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbGain_Output_Max.TextChanged += new System.EventHandler(this.tbGain_Output_Max_TextChanged);
@@ -701,10 +701,10 @@
             // 
             this.tbGain_Input_Min.BackColor = System.Drawing.Color.White;
             this.tbGain_Input_Min.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGain_Input_Min.ForeColor = System.Drawing.Color.Lime;
+            this.tbGain_Input_Min.ForeColor = System.Drawing.Color.Black;
             this.tbGain_Input_Min.Location = new System.Drawing.Point(3, 44);
             this.tbGain_Input_Min.Name = "tbGain_Input_Min";
-            this.tbGain_Input_Min.Size = new System.Drawing.Size(59, 35);
+            this.tbGain_Input_Min.Size = new System.Drawing.Size(59, 24);
             this.tbGain_Input_Min.TabIndex = 19;
             this.tbGain_Input_Min.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbGain_Input_Min.TextChanged += new System.EventHandler(this.tbGain_Input_Min_TextChanged);
@@ -713,10 +713,10 @@
             // 
             this.tbGain_Input_Max.BackColor = System.Drawing.Color.White;
             this.tbGain_Input_Max.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGain_Input_Max.ForeColor = System.Drawing.Color.Lime;
+            this.tbGain_Input_Max.ForeColor = System.Drawing.Color.Black;
             this.tbGain_Input_Max.Location = new System.Drawing.Point(3, 18);
             this.tbGain_Input_Max.Name = "tbGain_Input_Max";
-            this.tbGain_Input_Max.Size = new System.Drawing.Size(59, 35);
+            this.tbGain_Input_Max.Size = new System.Drawing.Size(59, 24);
             this.tbGain_Input_Max.TabIndex = 18;
             this.tbGain_Input_Max.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbGain_Input_Max.TextChanged += new System.EventHandler(this.tbGain_Input_Max_TextChanged);
@@ -725,10 +725,10 @@
             // 
             this.tbGain_D.BackColor = System.Drawing.Color.White;
             this.tbGain_D.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGain_D.ForeColor = System.Drawing.Color.Lime;
+            this.tbGain_D.ForeColor = System.Drawing.Color.Black;
             this.tbGain_D.Location = new System.Drawing.Point(54, 64);
             this.tbGain_D.Name = "tbGain_D";
-            this.tbGain_D.Size = new System.Drawing.Size(59, 35);
+            this.tbGain_D.Size = new System.Drawing.Size(59, 24);
             this.tbGain_D.TabIndex = 17;
             this.tbGain_D.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbGain_D.TextChanged += new System.EventHandler(this.tbGain_D_TextChanged);
@@ -737,10 +737,10 @@
             // 
             this.tbGain_I.BackColor = System.Drawing.Color.White;
             this.tbGain_I.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGain_I.ForeColor = System.Drawing.Color.Lime;
+            this.tbGain_I.ForeColor = System.Drawing.Color.Black;
             this.tbGain_I.Location = new System.Drawing.Point(54, 42);
             this.tbGain_I.Name = "tbGain_I";
-            this.tbGain_I.Size = new System.Drawing.Size(59, 35);
+            this.tbGain_I.Size = new System.Drawing.Size(59, 24);
             this.tbGain_I.TabIndex = 17;
             this.tbGain_I.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -748,7 +748,7 @@
             // 
             this.radLabel6.Location = new System.Drawing.Point(7, 65);
             this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(77, 34);
+            this.radLabel6.Size = new System.Drawing.Size(49, 22);
             this.radLabel6.TabIndex = 18;
             this.radLabel6.Text = "D Gain";
             // 
@@ -756,10 +756,10 @@
             // 
             this.tbGain_P.BackColor = System.Drawing.Color.White;
             this.tbGain_P.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGain_P.ForeColor = System.Drawing.Color.Lime;
+            this.tbGain_P.ForeColor = System.Drawing.Color.Black;
             this.tbGain_P.Location = new System.Drawing.Point(54, 20);
             this.tbGain_P.Name = "tbGain_P";
-            this.tbGain_P.Size = new System.Drawing.Size(59, 35);
+            this.tbGain_P.Size = new System.Drawing.Size(59, 24);
             this.tbGain_P.TabIndex = 15;
             this.tbGain_P.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbGain_P.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbGain_P_KeyDown);
@@ -768,7 +768,7 @@
             // 
             this.radLabel5.Location = new System.Drawing.Point(12, 43);
             this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(67, 34);
+            this.radLabel5.Size = new System.Drawing.Size(43, 22);
             this.radLabel5.TabIndex = 18;
             this.radLabel5.Text = "I Gain";
             // 
@@ -776,7 +776,7 @@
             // 
             this.radLabel3.Location = new System.Drawing.Point(9, 21);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(74, 34);
+            this.radLabel3.Size = new System.Drawing.Size(47, 22);
             this.radLabel3.TabIndex = 16;
             this.radLabel3.Text = "P Gain";
             // 
@@ -822,7 +822,7 @@
             this.tbCurrentTemp.ForeColor = System.Drawing.Color.Lime;
             this.tbCurrentTemp.Location = new System.Drawing.Point(86, 48);
             this.tbCurrentTemp.Name = "tbCurrentTemp";
-            this.tbCurrentTemp.Size = new System.Drawing.Size(94, 35);
+            this.tbCurrentTemp.Size = new System.Drawing.Size(94, 24);
             this.tbCurrentTemp.TabIndex = 1;
             this.tbCurrentTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -830,7 +830,7 @@
             // 
             this.lbCurrentTemp.Location = new System.Drawing.Point(4, 48);
             this.lbCurrentTemp.Name = "lbCurrentTemp";
-            this.lbCurrentTemp.Size = new System.Drawing.Size(152, 34);
+            this.lbCurrentTemp.Size = new System.Drawing.Size(96, 22);
             this.lbCurrentTemp.TabIndex = 2;
             this.lbCurrentTemp.Text = "Current Temp.";
             // 
@@ -841,7 +841,7 @@
             this.tbSetTemp.ForeColor = System.Drawing.Color.Lime;
             this.tbSetTemp.Location = new System.Drawing.Point(86, 23);
             this.tbSetTemp.Name = "tbSetTemp";
-            this.tbSetTemp.Size = new System.Drawing.Size(94, 35);
+            this.tbSetTemp.Size = new System.Drawing.Size(94, 24);
             this.tbSetTemp.TabIndex = 0;
             this.tbSetTemp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -849,7 +849,7 @@
             // 
             this.radLabel4.Location = new System.Drawing.Point(25, 24);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(109, 34);
+            this.radLabel4.Size = new System.Drawing.Size(69, 22);
             this.radLabel4.TabIndex = 0;
             this.radLabel4.Text = "Set Temp.";
             // 
@@ -865,7 +865,7 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 471);
             this.Controls.Add(this.groupBox3);
