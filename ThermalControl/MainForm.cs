@@ -679,7 +679,8 @@ namespace ThermalControl
 
 
 
-            /*
+            
+            // Request Current Flow from MFC by Serial Communication 
             buff[0] = 0x02;
 
             buff[1] = Convert.ToByte('0');
@@ -703,13 +704,7 @@ namespace ThermalControl
             buff[9] = 0x03;
 
             serialPort.Write(buff, 0, 10);
-             * */
-
-
-            
         }
-
-
 
 
         public float getLimited_PID_OV(double ov)
