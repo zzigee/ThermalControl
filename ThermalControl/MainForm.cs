@@ -52,6 +52,9 @@ namespace ThermalControl
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+
+
+
             timer1.Start();     // Start Mainform Timer 
 
             m_MainClass.m_LiveDataModel.StartTimer();     // Start LiveDataChart Timer 
@@ -80,9 +83,13 @@ namespace ThermalControl
             tbGain_Output_Max.Text = m_MainClass.stPIDGain.outMax.ToString();
             tbGain_Output_Min.Text = m_MainClass.stPIDGain.outMin.ToString();
 
+
             // Serial Port Open
             try
             {
+                serialPort.BaudRate = m_MainClass.m_Define_Class.MFC_Serial_BaudRate;
+                serialPort.PortName = m_MainClass.m_Define_Class.MFC_Serial_Port_Name;
+
                 serialPort.Open();
 
                 buff[0] = 0x02;
