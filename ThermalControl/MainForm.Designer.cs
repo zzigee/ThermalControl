@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.CartesianArea cartesianArea2 = new Telerik.WinControls.UI.CartesianArea();
-            Telerik.WinControls.UI.CategoricalAxis categoricalAxis2 = new Telerik.WinControls.UI.CategoricalAxis();
-            Telerik.WinControls.UI.LinearAxis linearAxis2 = new Telerik.WinControls.UI.LinearAxis();
-            Telerik.WinControls.UI.AreaSeries areaSeries2 = new Telerik.WinControls.UI.AreaSeries();
+            Telerik.WinControls.UI.CartesianArea cartesianArea1 = new Telerik.WinControls.UI.CartesianArea();
+            Telerik.WinControls.UI.CategoricalAxis categoricalAxis1 = new Telerik.WinControls.UI.CategoricalAxis();
+            Telerik.WinControls.UI.LinearAxis linearAxis1 = new Telerik.WinControls.UI.LinearAxis();
+            Telerik.WinControls.UI.AreaSeries areaSeries1 = new Telerik.WinControls.UI.AreaSeries();
             this.radRadialGauge1 = new Telerik.WinControls.UI.Gauges.RadRadialGauge();
             this.radialGaugeArc1 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
             this.radialGaugeArc2 = new Telerik.WinControls.UI.Gauges.RadialGaugeArc();
@@ -513,32 +513,32 @@
             // 
             // radChartView1
             // 
-            cartesianArea2.GridDesign.DrawVerticalFills = false;
-            cartesianArea2.ShowGrid = true;
-            this.radChartView1.AreaDesign = cartesianArea2;
-            categoricalAxis2.IsPrimary = true;
-            categoricalAxis2.LabelRotationAngle = 300D;
-            categoricalAxis2.Title = "";
-            linearAxis2.AxisType = Telerik.Charting.AxisType.Second;
-            linearAxis2.IsPrimary = true;
-            linearAxis2.LabelRotationAngle = 300D;
-            linearAxis2.TickOrigin = null;
-            linearAxis2.Title = "온도";
+            cartesianArea1.GridDesign.DrawVerticalFills = false;
+            cartesianArea1.ShowGrid = true;
+            this.radChartView1.AreaDesign = cartesianArea1;
+            categoricalAxis1.IsPrimary = true;
+            categoricalAxis1.LabelRotationAngle = 300D;
+            categoricalAxis1.Title = "";
+            linearAxis1.AxisType = Telerik.Charting.AxisType.Second;
+            linearAxis1.IsPrimary = true;
+            linearAxis1.LabelRotationAngle = 300D;
+            linearAxis1.TickOrigin = null;
+            linearAxis1.Title = "온도";
             this.radChartView1.Axes.AddRange(new Telerik.WinControls.UI.Axis[] {
-            categoricalAxis2,
-            linearAxis2});
+            categoricalAxis1,
+            linearAxis1});
             this.radChartView1.Controls.Add(this.button1);
             this.radChartView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radChartView1.Location = new System.Drawing.Point(2, 18);
             this.radChartView1.Name = "radChartView1";
-            areaSeries2.DataMember = "model.Data";
-            areaSeries2.HorizontalAxis = categoricalAxis2;
-            areaSeries2.LabelAngle = 90D;
-            areaSeries2.LabelDistanceToPoint = 15D;
-            areaSeries2.LegendTitle = null;
-            areaSeries2.VerticalAxis = linearAxis2;
+            areaSeries1.DataMember = "model.Data";
+            areaSeries1.HorizontalAxis = categoricalAxis1;
+            areaSeries1.LabelAngle = 90D;
+            areaSeries1.LabelDistanceToPoint = 15D;
+            areaSeries1.LegendTitle = null;
+            areaSeries1.VerticalAxis = linearAxis1;
             this.radChartView1.Series.AddRange(new Telerik.WinControls.UI.ChartSeries[] {
-            areaSeries2});
+            areaSeries1});
             this.radChartView1.Size = new System.Drawing.Size(600, 346);
             this.radChartView1.TabIndex = 0;
             this.radChartView1.Text = "radChartView1";
