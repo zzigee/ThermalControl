@@ -80,8 +80,7 @@ namespace ThermalControl
                     this.OnPropertyChanged("Data");
                 }
             }
-        }
-        
+        }        
 
         private ChartTemp CreateBusinessObject()
         {
@@ -93,7 +92,6 @@ namespace ThermalControl
 
             return obj;
         }
-
 
         private void OnTimer(object sender, EventArgs e)
         {

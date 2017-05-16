@@ -1000,5 +1000,10 @@ namespace ThermalControl
             if(e.KeyCode == Keys.Enter)
                 m_MainClass.stPIDGain.kp = double.Parse(tbGain_P.Text);
         }
+
+        private void radChartView1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

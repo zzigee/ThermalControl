@@ -545,6 +545,7 @@
             this.radChartView1.ThemeName = "Windows7";
             this.radChartView1.Title = "Temp.";
             this.radChartView1.Initialized += new System.EventHandler(this.radChartView1_Initialized);
+            this.radChartView1.Click += new System.EventHandler(this.radChartView1_Click);
             // 
             // serialPort
             // 
